@@ -2,9 +2,9 @@
 
 Tematika:
 
-1. AZ ELSŐ LÉPÉSEK
-2. LAYOUT ÉPÍTÉSE VIZUÁLISAN
-3. SWIFT, GIT
+1. [AZ ELSŐ LÉPÉSEK](https://github.com/Canecom/UniNews/tree/master/01)
+2. [LAYOUT ÉPÍTÉSE VIZUÁLISAN](https://github.com/Canecom/UniNews/tree/master/02)
+3. [SWIFT, GIT](https://github.com/Canecom/UniNews/tree/master/03)
 4. AZ ARCHITEKTÚRA KIVÁLASZTÁSA
 5. NAVIGÁCIÓ, APPLICATION LIFECYCLE
 6. SZÁL- ÉS HÁLÓZAT KEZELÉS
@@ -18,6 +18,9 @@ Tematika:
 14. UTOLSÓ ALKALOM
 
 Oktatók:
+
 * Orosz Gábor
-* Szloboda Zsolt
+
+* Szloboda Zsolt
+
 * Bödecs Tibor
