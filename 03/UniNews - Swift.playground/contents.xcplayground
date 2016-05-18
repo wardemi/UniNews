@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='rendered'>
+    <pages>
+        <page name='01_Table_of_contents'/>
+        <page name='02_Basics'/>
+        <page name='03_Types'/>
+        <page name='04_Control_flow_and_operators'/>
+        <page name='05_Functions_and_blocks'/>
+        <page name='06_Custom_types'/>
+        <page name='07_Protocols_and_delegates'/>
+        <page name='08_Coding_example'/>
+    </pages>
+</playground>
