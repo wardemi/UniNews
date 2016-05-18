@@ -18,6 +18,6 @@ Tematika:
 14. UTOLSÓ ALKALOM
 
 Oktatók:
-Orosz Gábor
-Szloboda Zsolt
-Bödecs Tibor
+* Orosz Gábor
+* Szloboda Zsolt
+* Bödecs Tibor

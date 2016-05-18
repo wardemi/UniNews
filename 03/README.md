@@ -1,6 +1,4 @@
-# UniNews
-
-## 3. SWIFT, GIT
+# 3. SWIFT, GIT
 
 Oktató:
 Bödecs Tibor
