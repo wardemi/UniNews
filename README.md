@@ -7,8 +7,8 @@ Tematika:
 3. [SWIFT, GIT](https://github.com/Canecom/UniNews/tree/master/03)
 4. AZ ARCHITEKTÚRA KIVÁLASZTÁSA
 5. NAVIGÁCIÓ, APPLICATION LIFECYCLE
-6. SZÁL- ÉS HÁLÓZAT KEZELÉS
-7. ADATOK ELŐKÉSZÍTÉSE
+6. ADATOK ELŐKÉSZÍTÉSE
+7. [SZÁL- ÉS HÁLÓZAT KEZELÉS](https://github.com/Canecom/UniNews/tree/master/07)
 8. HIBAKEZELÉS
 9. ADATOK FELTÖLTÉSE A SZERVERRE
 10. MULTIMÉDIÁS FUNKCIÓK
