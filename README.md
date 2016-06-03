@@ -9,7 +9,7 @@ Tematika:
 5. NAVIGÁCIÓ, APPLICATION LIFECYCLE
 6. ADATOK ELŐKÉSZÍTÉSE
 7. [SZÁL- ÉS HÁLÓZAT KEZELÉS](https://github.com/Canecom/UniNews/tree/master/07)
-8. HIBAKEZELÉS
+8. [HIBAKEZELÉS](https://github.com/Canecom/UniNews/tree/master/08)
 9. ADATOK FELTÖLTÉSE A SZERVERRE
 10. MULTIMÉDIÁS FUNKCIÓK
 11. TÖBB ESZKÖZRE OPTIMALIZÁLÁS
