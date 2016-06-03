@@ -67,7 +67,7 @@ class NetworkManager: NSObject {
     }
     
     func updateNews(news: News, name: String) {
-        alamofire.request(.POST, baseUrl + "posts/\(name).json?", parameters: newsToDict(news), encoding: .URL, headers: nil)
+        alamofire.request(.PATCH, baseUrl + "posts/\(name).json?", parameters: newsToDict(news), encoding: .URL, headers: nil)
         .responseJSON { response in
             var news: News? = self.handleResponse(response, parser: { [unowned self] newsDict -> News in
                 return self.dictToNews(newsDict)!
