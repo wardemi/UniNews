@@ -10,11 +10,13 @@ import Foundation
 import Alamofire
 import Timberjack
 
+let baseUrl = "https://project-1222363933064116453.firebaseio.com/"
+
 class NetworkManager: NSObject {
     
     //MARK: Variables
-    let alamofire: Alamofire.Manager
-    let cookies = NSHTTPCookieStorage.sharedHTTPCookieStorage()
+    private let alamofire: Alamofire.Manager
+    private let cookies = NSHTTPCookieStorage.sharedHTTPCookieStorage()
     
     //MARK: Singleton
     static let sharedInstance = NetworkManager()
@@ -30,27 +32,96 @@ class NetworkManager: NSObject {
  
     //MARK: Internal methods
     func getNews() {
-        let headers = [
-            "X-Something": "Something",
-            "X-Something-Else": "SomethingElse"
-        ]
-        let parameters = [
-            "param1Key": "param1Value",
-            "param2Key": 43
-        ]
-        alamofire.request(.GET, "", parameters: parameters, encoding: .URL, headers: headers)
-        .responseJSON { response in
-            switch response.result {
-            case .Success(let JSON):
-                print(JSON)
-                guard let json = JSON as? Dictionary<String, AnyObject> else { return }
-                // print(json["valami"])
-                break
-            case .Failure(let error):
-                print(error)
-                break
-            }
+        alamofire.request(.GET, baseUrl + "posts.json?print=pretty", parameters: nil, encoding: .URL, headers: nil)
+        .responseJSON { [unowned self] response in
+            var news: [News]? = self.handleResponse(response, parser: { newsDict -> [News] in
+                var news = [News]()
+                for (_, value) in newsDict {
+                    if let newsItemDict = value as? Dictionary<String, AnyObject> {
+                        if let newsItem = self.dictToNews(newsItemDict) {
+                            news.append(newsItem)
+                        }
+                    }
+                }
+                return news
+            })
         }
+    }
+    
+    func getSingleNews(name: String) {
+        alamofire.request(.GET, baseUrl + "posts/\(name).json?print=pretty", parameters: nil, encoding: .URL, headers: nil)
+        .responseJSON { [unowned self] response in
+            var news: News? = self.handleResponse(response, parser: { [unowned self] newsDict -> News in
+                return self.dictToNews(newsDict)!
+            })
+        }
+    }
+    
+    func postNews(news: News) {
+        alamofire.request(.POST, baseUrl + "posts.json", parameters: newsToDict(news), encoding: .URL, headers: nil)
+        .responseJSON { [unowned self] response in
+            var name: PostNewsResponse? = self.handleResponse(response, parser: { responseDict -> PostNewsResponse in
+                return PostNewsResponse(name: responseDict["name"] as! String)
+            })
+        }
+    }
+    
+    func updateNews(news: News, name: String) {
+        alamofire.request(.POST, baseUrl + "posts/\(name).json?", parameters: newsToDict(news), encoding: .URL, headers: nil)
+        .responseJSON { response in
+            var news: News? = self.handleResponse(response, parser: { [unowned self] newsDict -> News in
+                return self.dictToNews(newsDict)!
+            })
+        }
+    }
+    
+    //MARK: Private methods
+    private func handleResponse<T>(response: Response<AnyObject, NSError>, parser: (Dictionary<String, AnyObject> -> T)) -> T? {
+        var result: T?
+        switch response.result {
+        case .Success(let JSON):
+            guard let json = JSON as? Dictionary<String, AnyObject> else { return nil }
+            result = parser(json)
+        case .Failure(let error):
+            print(error)
+            //TODO: handle error
+        }
+        return result
+    }
+    
+    private func newsToDict(news: News?) -> Dictionary<String, AnyObject>? {
+        guard let news = news else { return nil }
+        var result = Dictionary<String, AnyObject>()
+        if let id = news.id {
+            result["id"] = id
+        }
+        if let body = news.body {
+            result["body"] = body
+        }
+        if let image = news.image {
+            result["image"] = image
+        }
+        if let title = news.title {
+            result["title"] = title
+        }
+        if let entertainment = news.entertainment {
+            result["entertainment"] = entertainment
+        }
+        if let url = news.url {
+            result["url"] = url
+        }
+        if let position = news.position {
+            result["position"] = position
+        }
+        if let uploader_user = news.uploader_user {
+            result["uploader_user"] = uploader_user
+        }
+        return result
+    }
+    
+    private func dictToNews(dict: Dictionary<String, AnyObject>?) -> News? {
+        guard let dict = dict else { return nil }
+        return News(id: dict["id"] as? String, body: dict["body"] as? String, image: dict["image"] as? String, title: dict["title"] as? String, entertainment: dict["entertainment"] as? String, url: dict["url"] as? String, position: dict["position"] as? [Int], uploader_user: dict["uploader_user"] as? String)
     }
     
 }
