@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='rendered'>
+    <pages>
+        <page name='01_Table_of_contents'/>
+        <page name='02_External_libraries'/>
+        <page name='03_Project_management'/>
+        <page name='04_Protocols_everywhere'/>
+        <page name='05_Functional_POP_with_generics'/>
+    </pages>
+</playground>
