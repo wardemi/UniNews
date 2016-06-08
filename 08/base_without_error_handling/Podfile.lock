@@ -1,0 +1,13 @@
+PODS:
+  - Alamofire (3.4.0)
+  - Timberjack (0.0.2)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.4)
+  - Timberjack
+
+SPEC CHECKSUMS:
+  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  Timberjack: 4181fb4fa5c0c02a0855deb5aa1ade6043db7b42
+
+COCOAPODS: 0.39.0
