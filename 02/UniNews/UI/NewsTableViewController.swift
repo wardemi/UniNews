@@ -18,7 +18,7 @@ class NewsTableViewController: UITableViewController {
         var details : String
     }
     
-    let first = ItemNews(name: "Kiss Otto:", time: NSDate(), imageProfileUrl: "user", imageUrl: "picture", details: "asdasd asdasdas asdasdas asdasdasd ewrwe sdviuyxcvkj iweur kjxc iuysdf kjhwer")
+    let first = ItemNews(name: "Kiss Otto:", time: NSDate(), imageProfileUrl: "user", imageUrl: "picture", details: "Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor.")
     
     
     override func viewDidLoad() {

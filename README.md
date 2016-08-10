@@ -20,7 +20,4 @@ Tematika:
 Oktatók:
 
 * Orosz Gábor
-
-* Szloboda Zsolt
-
 * Bödecs Tibor

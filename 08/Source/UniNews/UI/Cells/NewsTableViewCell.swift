@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class NewsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var imageProfile: UIImageView!
@@ -16,14 +15,12 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var labelPostdate: UILabel!
     @IBOutlet weak var labelDetails: UILabel!
     @IBOutlet weak var imageNews: UIImageView!
-    
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

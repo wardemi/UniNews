@@ -1,5 +1,0 @@
-# HIBAKEZELÉS
-
-Oktató:
-Szloboda Zsolt
-

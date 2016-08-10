@@ -26,9 +26,15 @@
  
  * [PromiseKit](https://github.com/mxcl/PromiseKit)
  
- ### Adatbázis és cache
+ ### Adatbázis
  
+ * [AlecrimCoreData](https://github.com/Alecrim/AlecrimCoreData)
+ * [AERecord](https://github.com/tadija/AERecord)
  * [Realm](https://github.com/realm/realm-cocoa)
+ * [SugarRecord](https://github.com/pepibumur/SugarRecord)
+ 
+ ### Cache
+ 
  * [SDWebImage](https://github.com/rs/SDWebImage)
  * [HanekeSwift](https://github.com/Haneke/HanekeSwift)
  * [Kingfisher](https://github.com/onevcat/Kingfisher)
@@ -41,6 +47,7 @@
  
  ### Dátum kezelés
  
+ * [Timepiece](https://github.com/naoty/Timepiece)
  * [Moment](https://github.com/akosma/SwiftMoment)
  * [DateTools](https://github.com/MatthewYork/DateTools)
  
