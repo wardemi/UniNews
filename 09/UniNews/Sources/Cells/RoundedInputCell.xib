@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RoundedInputCell" id="dSC-WY-uX9" customClass="RoundedInputCell" customModule="Uni_News" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="507" height="168"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="507" height="168"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nyk-s8-cRJ">
+                        <rect key="frame" x="0.0" y="0.0" width="507" height="168"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KMk-SR-82V">
+                                <rect key="frame" x="0.0" y="0.0" width="507" height="168"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="117" id="FBD-0z-6et"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="FBD-0z-6et"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Yv-hp-BnT">
+                                <rect key="frame" x="16" y="8" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="DzQ-X3-HAm"/>
+                                    <constraint firstAttribute="width" constant="117" id="HNa-v9-vXn"/>
+                                    <constraint firstAttribute="width" secondItem="6Yv-hp-BnT" secondAttribute="height" multiplier="1:1" id="hDn-PB-2mf"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="HNa-v9-vXn"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtb-Cq-Ume">
+                                <rect key="frame" x="52" y="75" width="439" height="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gtb-Cq-Ume" secondAttribute="trailing" constant="16" id="39X-kR-Iap"/>
+                            <constraint firstAttribute="bottom" secondItem="KMk-SR-82V" secondAttribute="bottom" id="5Ag-6V-bhQ"/>
+                            <constraint firstItem="6Yv-hp-BnT" firstAttribute="leading" secondItem="Nyk-s8-cRJ" secondAttribute="leading" constant="16" id="8gT-m0-76h"/>
+                            <constraint firstAttribute="trailing" secondItem="KMk-SR-82V" secondAttribute="trailing" id="9Rf-Py-3dT"/>
+                            <constraint firstItem="6Yv-hp-BnT" firstAttribute="top" secondItem="Nyk-s8-cRJ" secondAttribute="top" constant="8" id="I0D-OY-bfE"/>
+                            <constraint firstItem="KMk-SR-82V" firstAttribute="leading" secondItem="Nyk-s8-cRJ" secondAttribute="leading" id="MBH-eC-9di"/>
+                            <constraint firstItem="KMk-SR-82V" firstAttribute="top" secondItem="Nyk-s8-cRJ" secondAttribute="top" id="bPs-cf-YeH"/>
+                            <constraint firstItem="gtb-Cq-Ume" firstAttribute="leading" secondItem="6Yv-hp-BnT" secondAttribute="trailing" constant="8" id="bo7-Gh-ydh"/>
+                            <constraint firstAttribute="bottom" secondItem="6Yv-hp-BnT" secondAttribute="bottom" constant="8" id="fZw-Wz-6hk"/>
+                            <constraint firstItem="gtb-Cq-Ume" firstAttribute="centerY" secondItem="Nyk-s8-cRJ" secondAttribute="centerY" id="xUr-PJ-DGN"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="fZw-Wz-6hk"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="Nyk-s8-cRJ" firstAttribute="top" secondItem="dSC-WY-uX9" secondAttribute="top" id="HDD-hf-fl9"/>
+                <constraint firstAttribute="bottom" secondItem="Nyk-s8-cRJ" secondAttribute="bottom" id="dCL-Oh-pvx"/>
+                <constraint firstItem="Nyk-s8-cRJ" firstAttribute="leading" secondItem="dSC-WY-uX9" secondAttribute="leading" id="fLm-KT-rZq"/>
+                <constraint firstAttribute="trailing" secondItem="Nyk-s8-cRJ" secondAttribute="trailing" id="ze3-fa-Dbl"/>
+            </constraints>
+            <size key="customSize" width="507" height="168"/>
+            <connections>
+                <outlet property="iconView" destination="6Yv-hp-BnT" id="y4r-7w-Fo8"/>
+                <outlet property="imageView" destination="KMk-SR-82V" id="tuj-UC-Dcu"/>
+                <outlet property="roundedView" destination="Nyk-s8-cRJ" id="hfb-1S-6HG"/>
+                <outlet property="textLabel" destination="gtb-Cq-Ume" id="l0G-hC-xQU"/>
+                <outlet property="topConstraint" destination="I0D-OY-bfE" id="f0c-Dl-K8v"/>
+            </connections>
+            <point key="canvasLocation" x="529.5" y="307"/>
+        </collectionViewCell>
+    </objects>
+</document>

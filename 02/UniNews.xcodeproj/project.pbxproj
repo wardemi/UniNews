@@ -12,10 +12,6 @@
 		33DC5E481CECA45A00AD12BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33DC5E461CECA45A00AD12BE /* Main.storyboard */; };
 		33DC5E4A1CECA45B00AD12BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33DC5E491CECA45B00AD12BE /* Assets.xcassets */; };
 		33DC5E4D1CECA45B00AD12BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33DC5E4B1CECA45B00AD12BE /* LaunchScreen.storyboard */; };
-		33DC5E551CECAD1200AD12BE /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DC5E541CECAD1200AD12BE /* NewsTableViewController.swift */; };
-		33DC5E581CECAD4A00AD12BE /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DC5E571CECAD4A00AD12BE /* DetailsViewController.swift */; };
-		33DC5E5A1CECAD6D00AD12BE /* CreateNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DC5E591CECAD6D00AD12BE /* CreateNewsViewController.swift */; };
-		33DC5E5D1CECAE2D00AD12BE /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DC5E5C1CECAE2D00AD12BE /* NewsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,10 +22,6 @@
 		33DC5E491CECA45B00AD12BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33DC5E4C1CECA45B00AD12BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33DC5E4E1CECA45B00AD12BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		33DC5E541CECAD1200AD12BE /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsTableViewController.swift; path = UI/NewsTableViewController.swift; sourceTree = "<group>"; };
-		33DC5E571CECAD4A00AD12BE /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailsViewController.swift; path = UI/DetailsViewController.swift; sourceTree = "<group>"; };
-		33DC5E591CECAD6D00AD12BE /* CreateNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateNewsViewController.swift; path = UI/CreateNewsViewController.swift; sourceTree = "<group>"; };
-		33DC5E5C1CECAE2D00AD12BE /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsTableViewCell.swift; path = UI/Cells/NewsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +54,6 @@
 		33DC5E411CECA45A00AD12BE /* UniNews */ = {
 			isa = PBXGroup;
 			children = (
-				33DC5E561CECAD1600AD12BE /* UI */,
 				33DC5E421CECA45A00AD12BE /* AppDelegate.swift */,
 				33DC5E441CECA45A00AD12BE /* ViewController.swift */,
 				33DC5E461CECA45A00AD12BE /* Main.storyboard */,
@@ -71,25 +62,6 @@
 				33DC5E4E1CECA45B00AD12BE /* Info.plist */,
 			);
 			path = UniNews;
-			sourceTree = "<group>";
-		};
-		33DC5E561CECAD1600AD12BE /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				33DC5E5B1CECAE0F00AD12BE /* Cells */,
-				33DC5E541CECAD1200AD12BE /* NewsTableViewController.swift */,
-				33DC5E571CECAD4A00AD12BE /* DetailsViewController.swift */,
-				33DC5E591CECAD6D00AD12BE /* CreateNewsViewController.swift */,
-			);
-			name = UI;
-			sourceTree = "<group>";
-		};
-		33DC5E5B1CECAE0F00AD12BE /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				33DC5E5C1CECAE2D00AD12BE /* NewsTableViewCell.swift */,
-			);
-			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,10 +137,6 @@
 			files = (
 				33DC5E451CECA45A00AD12BE /* ViewController.swift in Sources */,
 				33DC5E431CECA45A00AD12BE /* AppDelegate.swift in Sources */,
-				33DC5E5D1CECAE2D00AD12BE /* NewsTableViewCell.swift in Sources */,
-				33DC5E551CECAD1200AD12BE /* NewsTableViewController.swift in Sources */,
-				33DC5E5A1CECAD6D00AD12BE /* CreateNewsViewController.swift in Sources */,
-				33DC5E581CECAD4A00AD12BE /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +286,7 @@
 				33DC5E531CECA45B00AD12BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

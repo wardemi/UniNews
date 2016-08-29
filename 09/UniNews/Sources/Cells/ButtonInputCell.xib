@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ButtonInputCell" id="mic-YK-rfQ" customClass="ButtonInputCell" customModule="Uni_News" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="388" height="93"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="388" height="93"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77Y-sE-BnZ">
+                        <rect key="frame" x="0.0" y="0.0" width="388" height="93"/>
+                        <state key="normal" title="Button"/>
+                        <connections>
+                            <action selector="buttonTouchedAction:" destination="mic-YK-rfQ" eventType="touchUpInside" id="6DZ-Ik-Cm1"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="77Y-sE-BnZ" firstAttribute="leading" secondItem="mic-YK-rfQ" secondAttribute="leading" id="5Dk-6D-p6m"/>
+                <constraint firstItem="77Y-sE-BnZ" firstAttribute="top" secondItem="mic-YK-rfQ" secondAttribute="top" id="Dfu-ja-e7x"/>
+                <constraint firstAttribute="bottom" secondItem="77Y-sE-BnZ" secondAttribute="bottom" id="L2A-YL-0yO"/>
+                <constraint firstAttribute="trailing" secondItem="77Y-sE-BnZ" secondAttribute="trailing" id="PVN-nK-gCH"/>
+            </constraints>
+            <size key="customSize" width="388" height="93"/>
+            <connections>
+                <outlet property="button" destination="77Y-sE-BnZ" id="Qau-bQ-UPU"/>
+            </connections>
+            <point key="canvasLocation" x="488" y="340.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

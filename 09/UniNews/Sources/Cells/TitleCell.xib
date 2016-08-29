@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TitleCell" id="8pE-Zx-9Z0" customClass="TitleCell" customModule="Uni_News" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="298" height="146"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="298" height="146"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnh-oD-KKM">
+                        <rect key="frame" x="8" y="58" width="282" height="29"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="vnh-oD-KKM" firstAttribute="leading" secondItem="8pE-Zx-9Z0" secondAttribute="leading" constant="8" id="P86-TF-g5y"/>
+                <constraint firstItem="vnh-oD-KKM" firstAttribute="centerY" secondItem="8pE-Zx-9Z0" secondAttribute="centerY" id="SMe-d4-fYo"/>
+                <constraint firstAttribute="trailing" secondItem="vnh-oD-KKM" secondAttribute="trailing" constant="8" id="fGz-lC-SM6"/>
+            </constraints>
+            <size key="customSize" width="298" height="146"/>
+            <connections>
+                <outlet property="textLabel" destination="vnh-oD-KKM" id="eHT-Pc-JrB"/>
+            </connections>
+            <point key="canvasLocation" x="578" y="546"/>
+        </collectionViewCell>
+    </objects>
+</document>

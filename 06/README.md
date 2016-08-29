@@ -6,8 +6,10 @@ Feltételekről, árakról itt lehet olvasni: [link](https://developer.apple.com
 
 ###Hogyan kell használni?
 
-A meglévő projektből indulunk ki. Project / General, figyelj a Bundle ID-ra és Team névre.
-Project / Capabilities, kapcsolt be az iCloud-ot, vigyázat, ehhez kell az Apple Dev Account
+A meglévő projektből indulunk ki. 
+
+- Project / General, figyelj a Bundle ID-ra és Team névre.
+- Project / Capabilities, kapcsolt be az iCloud-ot, vigyázat, ehhez kell az Apple Dev Account
 
 - key-value storage kell, és a cloudkit, mindkettő pipa
 - létrejön egy új container iCloud.<your app’s bundle id> néven

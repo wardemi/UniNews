@@ -1,6 +1,8 @@
 //: Playground - noun: a place where people can play
 
 
+
+//https://andybargh.com/error-handling-in-swift/
 // Any error you wish to throw must conform to the ErrorType protocol. (NSError conforms to this). For example:
 
 enum MyError: ErrorType {
