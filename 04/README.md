@@ -1,4 +1,4 @@
-#AZ ARCHITEKTÚRA KIVÁLASZTÁSA
+# 4. AZ ARCHITEKTÚRA KIVÁLASZTÁSA
 
 ###Az előző ismétlése
 - Építettünk layoutot vizuálisan
@@ -8,7 +8,7 @@
 - Foundation
 - UIKit
 - MVC
-- Adatkötés 
+- Adatkötés
 - Loggolás
 
 ###Foundation bemutatása
@@ -34,15 +34,15 @@ import Foundation
 
 var str = "Hello, playground"
 
-// 
+//
 
 class Book: NSObject {
     func chapters() {
-         
+
     }
-     
+
     func pages() {
-         
+
     }
 }
 
@@ -57,7 +57,7 @@ let book = Book()
 
 print(book.respondsToSelector("chapters"))
 
-// 
+//
 
 let myNumber = NSNumber(double: 854416e+13)
 print(myNumber.doubleValue)
@@ -69,12 +69,12 @@ print(myNumber.intValue)
 let stringA: NSString = "This is a string"
 print(stringA.classForCoder)
 
-// 
+//
 
 let myArray = NSArray(objects: "Bread", "Butter", "Milk", "Eggs")
 print(myArray.count)
 print(myArray.objectAtIndex(2))
- 
+
 var myMutableArray = NSMutableArray(object: NSNumber(int: 265))
 myMutableArray.addObject(NSNumber(int: 45))
 
@@ -82,12 +82,12 @@ myMutableArray.addObject(NSNumber(int: 45))
 
 let keyA: NSString = "myKey"
 let keyB: NSString = "myKey"
- 
+
 let myDictionary = NSDictionary(object: "This is a string literal", forKey: keyA)
- 
+
 print(myDictionary.objectForKey(keyB))
 
-// 
+//
 
 let myMutableDictionary = NSMutableDictionary()
 myMutableDictionary.setObject(myDictionary, forKey: "myDictionary")

@@ -1,4 +1,4 @@
-#SZÁL- ÉS HÁLÓZAT KEZELÉS
+#7. SZÁL- ÉS HÁLÓZAT KEZELÉS
 
 ###Az előző ismétlése:
 - Tisztában vagyunk a navigációval
@@ -36,7 +36,7 @@ Az ARC rendezkedik a háttrében:
 Egész jól csinálja, de egy baj marad, circular reference, [ez a kép](https://realm.io/assets/img/news/Hector-Matos-Human-Heart-strong-strong.jpg) jól mutatja a problémát.
 
 
-Példa, amikor egy objektum erősen fogja a másikat 
+Példa, amikor egy objektum erősen fogja a másikat
 
 ```swift
 //Kraken holds a strong reference to the yummy human.
@@ -87,7 +87,7 @@ Még olvasmány:
 - [](http://www.appcoda.com/ios-concurrency/)
 
 
-A GCD-ből, amire szükségünk van az a queue fogalma. FIFO adastruktúra, mint a mozipénztár, gyűlnek az emberek sorba, egy pénztáros mindig csak egy emberrel foglalkozik, mindig a következővel. Aki előbb áll be, előbb megy ki. 
+A GCD-ből, amire szükségünk van az a queue fogalma. FIFO adastruktúra, mint a mozipénztár, gyűlnek az emberek sorba, egy pénztáros mindig csak egy emberrel foglalkozik, mindig a következővel. Aki előbb áll be, előbb megy ki.
 
 Lásd [ábra](http://www.appcoda.com/wp-content/uploads/2015/10/queue-line-2-1166050-1280x960.jpg).
 
@@ -110,7 +110,7 @@ Mindkettő esetében lehet állítani:
 Egy kis kód jöhet ide:
 
 ```swift
-@IBAction func didClickOnStart(sender: AnyObject) { 
+@IBAction func didClickOnStart(sender: AnyObject) {
     queue = NSOperationQueue()
     let operation1 = NSBlockOperation(block: {
         let img1 = Downloader.downloadImageWithURL(imageURLs[0])
@@ -118,44 +118,44 @@ Egy kis kód jöhet ide:
             self.imageView1.image = img1
         })
     })
-    
+
     operation1.completionBlock = {
         print("Operation 1 completed")
     }
     queue.addOperation(operation1)
-    
+
     let operation2 = NSBlockOperation(block: {
         let img2 = Downloader.downloadImageWithURL(imageURLs[1])
         NSOperationQueue.mainQueue().addOperationWithBlock({
             self.imageView2.image = img2
         })
     })
-    
+
     operation2.completionBlock = {
         print("Operation 2 completed")
     }
     queue.addOperation(operation2)
-    
-    
+
+
     let operation3 = NSBlockOperation(block: {
         let img3 = Downloader.downloadImageWithURL(imageURLs[2])
         NSOperationQueue.mainQueue().addOperationWithBlock({
             self.imageView3.image = img3
         })
     })
-    
+
     operation3.completionBlock = {
         print("Operation 3 completed")
     }
     queue.addOperation(operation3)
-    
+
     let operation4 = NSBlockOperation(block: {
         let img4 = Downloader.downloadImageWithURL(imageURLs[3])
         NSOperationQueue.mainQueue().addOperationWithBlock({
             self.imageView4.image = img4
         })
     })
-    
+
     operation4.completionBlock = {
         print("Operation 4 completed")
     }
@@ -166,7 +166,7 @@ Egy kis kód jöhet ide:
 Cancel példa
 
 ```swift
-@IBAction func didClickOnCancel(sender: AnyObject) {        
+@IBAction func didClickOnCancel(sender: AnyObject) {
     self.queue.cancelAllOperations()
 }
 ```
@@ -201,14 +201,14 @@ Majd töltsünk is le egy tracklistát iTunesból
 // With NSURLSession
 public func fetchAllRooms(completion: ([RemoteRoom]?) -> Void) {
   let url = NSURL(string: "http://localhost:5984/rooms/_all_docs?include_docs=true")!
- 
+
   let urlRequest = NSMutableURLRequest(
     URL: url,
     cachePolicy: .ReloadIgnoringLocalAndRemoteCacheData,
     timeoutInterval: 10.0 * 1000)
   urlRequest.HTTPMethod = "GET"
   urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
- 
+
   let task = urlSession.dataTaskWithRequest(urlRequest)
     { (data, response, error) -> Void in
     guard error == nil else {
@@ -216,28 +216,28 @@ public func fetchAllRooms(completion: ([RemoteRoom]?) -> Void) {
       completion(nil)
       return
     }
- 
+
     guard let json = try? NSJSONSerialization.JSONObjectWithData(data!,
       options: []) as? [String: AnyObject] else {
         print("Nil data received from fetchAllRooms service")
         completion(nil)
         return
     }
- 
+
     guard let rows = json["rows"] as? [[String: AnyObject]] {
       print("Malformed data received from fetchAllRooms service")
       completion(nil)
       return
     }
- 
+
     var rooms = [RemoteRoom]()
     for roomDict in rows {
       rooms.append(RemoteRoom(jsonData: roomDict))
     }
- 
+
     completion(rooms)
   }
- 
+
   task.resume()
 }
 ```
@@ -263,19 +263,19 @@ func fetchAllRooms(completion: ([RemoteRoom]?) -> Void) {
         completion(nil)
         return
       }
- 
+
       guard let value = response.result.value as? [String: AnyObject],
         rows = value["rows"] as? [[String: AnyObject]] else {
           print("Malformed data received from fetchAllRooms service")
            completion(nil)
            return
       }
- 
+
       var rooms = [RemoteRoom]()
       for roomDict in rows {
         rooms.append(RemoteRoom(jsonData: roomDict))
       }
- 
+
       completion(rooms)
   }
 }

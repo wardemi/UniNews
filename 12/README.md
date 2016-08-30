@@ -1,4 +1,5 @@
 # 12. LEGJOBB MEGOLDÁSOK
 
-Oktató:
-Bödecs Tibor
+- Külső libek
+- Projectek kezelése
+- Protokollok mindenütt

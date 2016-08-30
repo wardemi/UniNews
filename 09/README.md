@@ -1,3 +1,3 @@
-#ADATOK FELTÖLTÉSE A SZERVERRE
+# 9. ADATOK FELTÖLTÉSE A SZERVERRE
 
-###A demo project.
+- A demo project.

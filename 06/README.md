@@ -1,19 +1,19 @@
-#ADATOK ELŐKÉSZÍTÉSE
+#6. ADATOK ELŐKÉSZÍTÉSE
 
-Minden jó app mögé kell egy backend, valami egyszerű megoldást kerestünk, az Apple féle CloudKit pedig adta magát... egyszerű, gyorsan lehet vele haladni, és elég biztonságos. 
+Minden jó app mögé kell egy backend, valami egyszerű megoldást kerestünk, az Apple féle CloudKit pedig adta magát... egyszerű, gyorsan lehet vele haladni, és elég biztonságos.
 
 Feltételekről, árakról itt lehet olvasni: [link](https://developer.apple.com/icloud/documentation/cloudkit-storage/)
 
 ###Hogyan kell használni?
 
-A meglévő projektből indulunk ki. 
+A meglévő projektből indulunk ki.
 
 - Project / General, figyelj a Bundle ID-ra és Team névre.
 - Project / Capabilities, kapcsolt be az iCloud-ot, vigyázat, ehhez kell az Apple Dev Account
 
 - key-value storage kell, és a cloudkit, mindkettő pipa
 - létrejön egy új container iCloud.<your app’s bundle id> néven
-- kell egy fix issue, többször is nyomd meg, sok dolgot nem javít meg elsőre 
+- kell egy fix issue, többször is nyomd meg, sok dolgot nem javít meg elsőre
 - az icloud container neve fontos, erre figyeljetek, globálisan egyedinek kell lennie
 
 ###Nézzük mega cloudkit dashboardot
@@ -30,18 +30,18 @@ Online is elérhető [innen](https://icloud.developer.apple.com/dashboard/).
 - Photo - Asset -
 - Description - String -
 - DateAdded - Date / Time - Sort
-- UploaderName - String - 
+- UploaderName - String -
 
 
 #### Record 1
 - Title: Öt kihagyhatatlan utazás, amely soha nem lesz ennyire olcsó
 - Photo: http://m.blog.hu/fa/fapadosinfo/image/.thumbs/kikoto_2e711af6b4d638ff16232eeeabfd0b1e.jpg
-- Description: Lett megint sok olcsó fapados jegy, immár őszre - ez eddig papírforma. De van néhány, amely annyira kirívóan jóáras, hogy szinte bűn kihagyni. Bulisziget, lüktető európai nagyváros, gyönyörű kora őszi riviéra és télen 30 fokot tudó tengerparti célpont. Van itt minden olyan áron, amennyiért valószínűleg sose lesz többet.  
+- Description: Lett megint sok olcsó fapados jegy, immár őszre - ez eddig papírforma. De van néhány, amely annyira kirívóan jóáras, hogy szinte bűn kihagyni. Bulisziget, lüktető európai nagyváros, gyönyörű kora őszi riviéra és télen 30 fokot tudó tengerparti célpont. Van itt minden olyan áron, amennyiért valószínűleg sose lesz többet.
 - DateAdded: 2016. július 30., szombat 22:23
 - UploaderName: Repülős Rozi
 
 #### Record 2
-- Title: Mi történt a Ferrarival? – Vettel nem érti… 
+- Title: Mi történt a Ferrarival? – Vettel nem érti…
 - Photo: http://telesport.cms.mtv.hu/wp-content/uploads/sites/10/2016/07/XPB_830741_1200px.jpg
 - Description: Mi történt a Ferrarival és Sebastian Vettellel? A Német Nagydíj időmérő edzése mindkettejüknek valóságos vereséggel ért fel.
 - DateAdded: 2016. július 30., szombat 15:53
@@ -66,7 +66,7 @@ func fetchArticles() {
     let defaultContainer = CKContainer.defaultContainer()
     let publicDatabase = defaultContainer.publicCloudDatabase
     let predicate = NSPredicate(value: true)
-    
+
     let query = CKQuery(recordType: "Article", predicate: predicate)
 
     ...
@@ -81,11 +81,11 @@ func fetchArticles() {
 	    }
 	    else {
 	        print(results)
-	        
+
 	        for result in results! {
 	            // TODO
 	        }
-	        
+
 	        NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
 	            // TOTO
 	        })
@@ -95,7 +95,7 @@ func fetchArticles() {
 
 
 override func viewDidLoad() {
-	... 
+	...
     fetchArticles()
 }
 
@@ -116,16 +116,16 @@ import CloudKit
 
 class Article {
     let record: CKRecord
-    
+
     let title: String!
     let photoUrl: NSURL!
     let description: String!
     let dateAdded: NSDate
     let uploaderName: String!
-    
+
     init(record : CKRecord) {
         self.record = record
-        
+
         self.title = record.objectForKey("Title") as! String
         self.photoUrl = (self.record.objectForKey("Photo") as? CKAsset)?.fileURL
         self.description = record.objectForKey("Description") as! String
@@ -146,16 +146,16 @@ func fetchArticles() {
 func uploadRecord() {
     let firstItem = self.items[0]
     firstItem.title = "New new new"
-    
+
     let asset = CKAsset(fileURL: firstItem.photoUrl!)
-    
+
     let myRecord = CKRecord(recordType: "Article")
     myRecord.setObject(firstItem.title, forKey: "Title")
     myRecord.setObject(firstItem.description, forKey: "Description")
     myRecord.setObject(asset, forKey: "Photo")
     myRecord.setObject(firstItem.dateAdded, forKey: "DateAdded")
     myRecord.setObject(firstItem.uploaderName, forKey: "Uploader")
-    
+
     let defaultContainer = CKContainer.defaultContainer()
     let publicDatabase = defaultContainer.publicCloudDatabase
     publicDatabase.saveRecord(myRecord, completionHandler:
